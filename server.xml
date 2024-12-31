@@ -32,7 +32,7 @@
        Documentation at /docs/config/service.html
    -->
   <Service name="Catalina">
-    <!-- A "Connector" represents an endpoint by which requests are received
+    <!-- A "Connetor" represents an endpoint by which requests are received
          and responses are returned. Documentation at :
          Java HTTP Connector: /docs/config/http.html
          Java AJP  Connector: /docs/config/ajp.html

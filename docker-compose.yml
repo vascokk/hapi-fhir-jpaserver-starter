@@ -2,6 +2,7 @@ version: "3"
 services:
   hapi-fhir-jpaserver-start:
     build: .
+#    image: hapi-fhir/hapi-fhir-jpaserver-starter
     container_name: hapi-fhir-jpaserver-start
     restart: on-failure
     environment:
@@ -14,6 +15,8 @@ services:
     configs:
       - source: hapi
         target: /app/config/application.yaml
+#      - source: hapi-extra-classes
+#        target: /app/extra-classes
   db:
     image: postgres:15-alpine
     container_name: hapi-fhir-postgres
@@ -29,3 +32,5 @@ volumes:
 configs:
   hapi:
      file: ./hapi.application.yaml
+#  hapi-extra-classes:
+#    file: /home/vasco/projects/fhir/rest-proxy-client-interceptor/target/classes
